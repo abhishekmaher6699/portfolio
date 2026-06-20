@@ -144,13 +144,6 @@
   }
   .title {
     @apply font-serif text-5xl tracking-wide;
-    text-decoration-line: underline;
-    text-decoration-color: color-mix(
-      in srgb,
-      var(--color-border) 75%,
-      transparent
-    );
-    text-decoration-thickness: 2px;
   }
   .link {
     @apply text-muted-foreground hover:text-foreground transition-colors;

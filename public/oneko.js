@@ -74,7 +74,8 @@
     "/oneko.gif",
     "/kuroneko.gif",
     "/oneko-dog.gif",
-    "/oneko-maia.gif"
+    "/oneko-maia.gif",
+    "/oneko-tora.gif"
   ];
 
   function createNeko(id, startX, startY, nekoFile) {
