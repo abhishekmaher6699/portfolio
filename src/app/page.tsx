@@ -4,6 +4,7 @@ import Posts from "@/components/Posts";
 import PostsSkeleton from "@/components/PostsSkeleton";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import Certifications from "@/components/Certifications";
 import Socials from "@/components/Socials";
 import SwipeCards from "@/components/SwipeCards";
 import { Button } from "@/components/ui/Button";
@@ -106,6 +107,8 @@ export default function Home() {
         </div>
         <Projects limit={LIMIT} />
       </section>
+
+      <Certifications />
 
       <section className="flex flex-col gap-8">
         <div className="flex justify-between">

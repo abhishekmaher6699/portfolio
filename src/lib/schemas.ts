@@ -45,3 +45,13 @@ const skillCategory = z.object({
 });
 export const skillsSchema = z.object({ categories: z.array(skillCategory) });
 export type SkillCategory = z.infer<typeof skillCategory>;
+
+const certification = z.object({
+  title: z.string(),
+  issuer: z.string(),
+  href: z.string().optional(),
+});
+export const certificationsSchema = z.object({
+  certifications: z.array(certification),
+});
+export type Certification = z.infer<typeof certification>;

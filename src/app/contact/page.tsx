@@ -68,7 +68,7 @@ export default function ContactPage() {
             href="https://twitter.com/abhiuwu"
             target="_blank"
             rel="noopener noreferrer"
-            className="link font-semibold text-foreground hover:underline"
+            className="link text-foreground font-semibold hover:underline"
           >
             @abhiuwu
           </a>

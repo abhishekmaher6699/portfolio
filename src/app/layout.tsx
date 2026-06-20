@@ -22,13 +22,8 @@ export const metadata: Metadata = {
   description:
     "Portfolio of Abhishek Maher, focused on Data Science, AI/ML, and full-stack web development.",
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
-    apple: "/apple-touch-icon.png",
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
-  manifest: "/manifest.json",
 };
 
 export const viewport: Viewport = {

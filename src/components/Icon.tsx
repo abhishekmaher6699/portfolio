@@ -1,5 +1,24 @@
 import React from "react";
-import { Globe, LucideProps } from "lucide-react";
+import {
+  Globe,
+  LucideProps,
+  Atom,
+  Database,
+  Zap,
+  Workflow,
+  Cloud,
+  Terminal,
+  Code,
+  Container,
+  Layers,
+  Brain,
+  BrainCircuit,
+  Bot,
+  Sparkles,
+  ScanEye,
+  Activity,
+  Compass,
+} from "lucide-react";
 
 // Inlined brand icons because they are removed in lucide-react v1+
 const GithubIcon = ({ size, absoluteStrokeWidth, ...props }: LucideProps) => (
@@ -56,11 +75,53 @@ const LinkedinIcon = ({ size, absoluteStrokeWidth, ...props }: LucideProps) => (
   </svg>
 );
 
+const PythonIcon = ({ size, absoluteStrokeWidth, ...props }: LucideProps) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size || "14"}
+    height={size || "14"}
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M14.25.18a.25.25 0 0 0-.25.25v2.45a.25.25 0 0 0 .25.25h3.04a.25.25 0 0 1 .25.25v3.04a.25.25 0 0 1-.25.25h-4.29a2 2 0 0 0-2 2v2.29a2 2 0 0 0 2 2h4.29a2.5 2.5 0 0 0 2.5-2.5V8.42a2.5 2.5 0 0 0-2.5-2.5H16.2a.25.25 0 0 1-.25-.25V3.04a3 3 0 0 0-3-3h-2.28zM9.75 23.82a.25.25 0 0 0 .25-.25v-2.45a.25.25 0 0 0-.25-.25H6.71a.25.25 0 0 1-.25-.25v-3.04a.25.25 0 0 1 .25-.25h4.29a2 2 0 0 0 2-2v-2.29a2 2 0 0 0-2-2H6.71a2.5 2.5 0 0 0-2.5 2.5v4.29a2.5 2.5 0 0 0 2.5 2.5h1.08a.25.25 0 0 1 .25.25v2.63a3 3 0 0 0 3 3h2.21z" />
+  </svg>
+);
+
+const VercelIcon = ({ size, absoluteStrokeWidth, ...props }: LucideProps) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size || "14"}
+    height={size || "14"}
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M24 22.525H0L12 1.475L24 22.525Z" />
+  </svg>
+);
+
 const iconMap = {
   github: GithubIcon,
   twitter: TwitterIcon,
   linkedin: LinkedinIcon,
   globe: Globe,
+  python: PythonIcon,
+  django: Layers,
+  react: Atom,
+  vercel: VercelIcon,
+  docker: Container,
+  postgresql: Database,
+  supabase: Zap,
+  githubactions: Workflow,
+  expressjs: Terminal,
+  sql: Database,
+  javascript: Code,
+  brain: Brain,
+  braincircuit: BrainCircuit,
+  bot: Bot,
+  sparkles: Sparkles,
+  scaneye: ScanEye,
+  activity: Activity,
+  compass: Compass,
 } as const;
 
 interface IconProps extends Omit<LucideProps, "ref"> {

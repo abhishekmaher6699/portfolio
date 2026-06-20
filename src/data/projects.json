@@ -50,6 +50,26 @@
       ]
     },
     {
+      "name": "UnBoxd",
+      "description": "A full-stack Letterboxd diary analytics dashboard that delivers personalized movie insights, personality profiling, and taste-based recommendations with interactive D3.js data visualizations.",
+      "image": "/img/unboxd.png",
+      "tags": [
+        "React",
+        "FastAPI",
+        "Tailwind CSS",
+        "SQLite",
+        "D3.js",
+        "Scraping"
+      ],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/abhishekmaher6699/unboxd",
+          "icon": "github"
+        }
+      ]
+    },
+    {
       "name": "Road Not Taken",
       "description": "A work-in-progress full-stack TypeScript project.",
       "tags": ["TypeScript", "Full-Stack", "Web"],
