@@ -51,7 +51,7 @@ export default function Mermaid({ chart, className }: MermaidProps) {
     return (
       <div
         className={cn(
-          "my-6 rounded-md border border-destructive/30 bg-destructive/5 p-4 text-sm text-destructive",
+          "border-destructive/30 bg-destructive/5 text-destructive my-6 rounded-md border p-4 text-sm",
           className,
         )}
       >
@@ -63,8 +63,8 @@ export default function Mermaid({ chart, className }: MermaidProps) {
   return (
     <div
       className={cn(
-        "my-8 overflow-x-auto rounded-lg bg-muted/30 p-4",
-        "dark:border dark:border-border/70 dark:bg-muted/30",
+        "bg-muted/30 my-8 overflow-x-auto rounded-lg p-4",
+        "dark:border-border/70 dark:bg-muted/30 dark:border",
         className,
       )}
     >

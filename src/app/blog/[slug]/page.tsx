@@ -1,7 +1,6 @@
 import BlogImage from "@/components/BlogImage";
 import LinkWithIcon from "@/components/LinkWithIcon";
 import MDXContent from "@/components/MDXContent";
-import ViewCounter from "@/components/ViewCounter";
 import { Badge } from "@/components/ui/Badge";
 import { Separator } from "@/components/ui/Separator";
 import { getPostBySlug, getPosts } from "@/lib/posts";
@@ -12,7 +11,6 @@ import {
   CalendarIcon,
   ClockIcon,
   Edit3Icon,
-  EyeIcon,
   UsersIcon,
 } from "lucide-react";
 import { notFound } from "next/navigation";
@@ -29,9 +27,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = params;
+  const { slug } = await params;
   const post = await getPostBySlug(slug);
 
   if (!post) {
@@ -51,8 +49,12 @@ export async function generateMetadata({
   };
 }
 
-export default async function Post({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function Post({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
   const post = await getPostBySlug(slug);
 
   if (!post) {
@@ -69,10 +71,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
     readingTime,
     draft,
     coAuthors,
-    views,
   } = post;
-
-  const initialViewCount = typeof views === "number" ? views : 0;
 
   const shouldShowUpdated =
     updatedAt &&
@@ -81,7 +80,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
       new Date(publishedAt || updatedAt).getTime();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="bg-background min-h-screen">
       {/* Navigation */}
       <nav className="mb-12">
         <LinkWithIcon
@@ -89,7 +88,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
           position="left"
           icon={<ArrowLeftIcon className="size-4" />}
           text="Back to blog"
-          className="text-muted-foreground transition-colors hover:text-foreground"
+          className="text-muted-foreground hover:text-foreground transition-colors"
         />
       </nav>
 
@@ -117,12 +116,12 @@ export default async function Post({ params }: { params: { slug: string } }) {
         {/* Header */}
         <header className="mb-16">
           <div className="space-y-6">
-            <h1 className="bg-gradient-to-br from-foreground to-foreground/80 bg-clip-text text-4xl font-bold leading-tight tracking-tight text-transparent sm:text-5xl lg:text-6xl">
+            <h1 className="from-foreground to-foreground/80 bg-gradient-to-br bg-clip-text text-4xl leading-tight font-bold tracking-tight text-transparent sm:text-5xl lg:text-6xl">
               {title}
             </h1>
 
             {summary && (
-              <p className="max-w-3xl text-xl leading-relaxed text-muted-foreground/90">
+              <p className="text-muted-foreground/90 max-w-3xl text-xl leading-relaxed">
                 {summary}
               </p>
             )}
@@ -130,22 +129,11 @@ export default async function Post({ params }: { params: { slug: string } }) {
             {/* Metadata section */}
             <div className="flex flex-col gap-4 pt-2">
               {/* Reading time, Published, Updated */}
-              <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+              <div className="text-muted-foreground flex flex-wrap items-center gap-4 text-sm">
                 {/* Reading time */}
                 <div className="flex items-center gap-1.5">
                   <ClockIcon className="h-4 w-4" />
                   <span>{readingTime}</span>
-                </div>
-
-                <Separator
-                  orientation="vertical"
-                  className="hidden h-4 sm:block"
-                />
-
-                {/* Views */}
-                <div className="flex items-center gap-1.5">
-                  <EyeIcon className="h-4 w-4" />
-                  <ViewCounter slug={slug} initialCount={initialViewCount} />
                 </div>
 
                 <Separator
@@ -191,11 +179,11 @@ export default async function Post({ params }: { params: { slug: string } }) {
 
               {/* Co-authors */}
               {coAuthors && coAuthors.length > 0 && (
-                <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+                <div className="text-muted-foreground flex flex-wrap items-center gap-2 text-sm">
                   <UsersIcon className="h-4 w-4" />
                   <span>
                     Co-authored with{" "}
-                    <span className="font-semibold text-foreground">
+                    <span className="text-foreground font-semibold">
                       {coAuthors.join(", ")}
                     </span>
                   </span>
@@ -206,17 +194,17 @@ export default async function Post({ params }: { params: { slug: string } }) {
         </header>
 
         {/* Content */}
-        <main className="prose prose-lg max-w-none dark:prose-invert">
+        <main className="prose prose-lg dark:prose-invert max-w-none">
           <MDXContent source={post.content} />
         </main>
 
         {/* Footer */}
         <footer className="mt-24">
-          <div className="overflow-hidden rounded-lg border bg-card shadow-sm">
+          <div className="bg-card overflow-hidden rounded-lg border shadow-sm">
             <div className="p-6">
               <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-center">
                 {/* Date info */}
-                <div className="space-y-2 text-sm text-muted-foreground">
+                <div className="text-muted-foreground space-y-2 text-sm">
                   {/* Draft status indicator */}
                   {draft && (
                     <p className="flex items-center gap-2 text-orange-600 dark:text-orange-400">
@@ -259,7 +247,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
                   position="right"
                   icon={<ArrowLeftIcon className="size-4 rotate-180" />}
                   text="More posts"
-                  className="text-muted-foreground transition-colors hover:text-primary"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 />
               </div>
             </div>

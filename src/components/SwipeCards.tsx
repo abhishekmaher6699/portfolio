@@ -117,14 +117,14 @@ const Card = ({
       {isFront ? (
         <ImageWithSkeleton
           src={url}
-          alt="Photo of Ted"
+          alt="Photo of Abhishek"
           width={175}
           height={233}
           sizes="175px"
           quality={75}
           draggable={false}
           containerClassName="h-full w-full pointer-events-none"
-          className="h-full w-full select-none object-cover"
+          className="h-full w-full object-cover select-none"
           fetchPriority="high"
           priority
         />
@@ -138,7 +138,7 @@ const Card = ({
           quality={70}
           draggable={false}
           containerClassName="h-full w-full pointer-events-none"
-          className="h-full w-full select-none object-cover"
+          className="h-full w-full object-cover select-none"
           fetchPriority="low"
           loading="lazy"
         />
@@ -157,18 +157,18 @@ type Card = {
 const cardData: Card[] = [
   {
     id: 1,
-    url: "/img/ted-2018.jpg",
+    url: "/img/abhi-1.jpg",
   },
   {
     id: 2,
-    url: "/img/ted-2021.jpg",
+    url: "/img/abhi-2.jpg",
   },
   {
     id: 3,
-    url: "/img/ted-2024.jpg",
+    url: "/img/abhi-3.jpg",
   },
   {
     id: 4,
-    url: "/img/ted-2025.jpg",
+    url: "/img/abhi-4.jpg",
   },
 ];

@@ -1,128 +1,126 @@
 {
   "projects": [
     {
-      "name": "TT4D",
-      "description": "Generate winning combinations, view past results, and analyze lottery trends all in one place",
-      "image": "/img/tt4d.png",
+      "name": "OpenBoard",
+      "description": "A real-time collaborative whiteboard with live drawing, chat, presence, invite-based access, approvals, roles, undo/redo, and activity tracking.",
+      "image": "/img/openboard-1.png",
       "tags": [
-        "Python",
-        "FastAPI",
-        "Docker",
-        "Fly.io",
-        "NextJS",
+        "React",
+        "TypeScript",
+        "Django",
+        "DRF",
+        "Channels",
         "PostgreSQL",
-        "TailwindCSS",
-        "BS4"
+        "Redis",
+        "WebSockets"
       ],
       "links": [
         {
-          "name": "Website",
-          "href": "https://huatnumbers.com",
-          "icon": "globe"
-        },
-        {
           "name": "Source",
-          "href": "https://github.com/tedawf/tt4d",
-          "icon": "github"
-        },
-        {
-          "name": "Source (UI)",
-          "href": "https://github.com/tedawf/tt4d-web",
+          "href": "https://github.com/abhishekmaher6699/openboard",
           "icon": "github"
         }
       ]
     },
     {
-      "name": "Tradingview Telegram Alerts",
-      "description": "Real-time trading alerts with chart snapshots sent to Telegram, designed to keep traders informed and responsive to market changes",
-      "image": "/img/tv-tele-alerts.png",
+      "name": "Aeon.find",
+      "description": "An automated essay recommendation system using TF-IDF and cosine similarity, with scraping, retraining, PostgreSQL storage, Docker deployment, and scheduled CI/CD.",
+      "href": "https://aeon-latest.onrender.com/",
+      "image": "/img/aeon-1.png",
       "tags": [
-        "Python",
-        "FastAPI",
+        "Django",
+        "PostgreSQL",
         "Docker",
-        "Fly.io",
-        "Selenium",
-        "Telegram Bot API"
+        "GitHub Actions",
+        "Render",
+        "TF-IDF",
+        "Recommendation Systems"
       ],
       "links": [
         {
           "name": "Source",
-          "href": "https://github.com/tedawf/tradingview-telegram-alerts",
+          "href": "https://github.com/abhishekmaher6699/aeon.find",
           "icon": "github"
-        }
-      ]
-    },
-    {
-      "name": "NFTVue",
-      "description": "Non-Fungible Tokens (NFTs) Gallery Viewer website that allows users to connect their crypto wallets to view and verify their tokens",
-      "href": "https://nftvue.vercel.app",
-      "image": "/img/nftvue.png",
-      "tags": [
-        "NextJS",
-        "TailwindCSS",
-        "MetaMask",
-        "WalletConnect",
-        "Web3",
-        "NFTScan",
-        "HashKey DID"
-      ],
-      "links": [
+        },
         {
           "name": "Website",
-          "href": "https://nftvue.vercel.app",
+          "href": "https://aeon-latest.onrender.com/",
           "icon": "globe"
         }
       ]
     },
     {
-      "name": "Portfolio 2023 (Outdated)",
-      "description": "Simple markdown portfolio made with Astro 🚀",
-      "href": "https://tedawf-dot-com.netlify.app",
-      "image": "/img/old-portfolio.png",
-      "tags": ["Astro", "TailwindCSS", "Netlify", "SEO"],
+      "name": "Road Not Taken",
+      "description": "A work-in-progress full-stack TypeScript project.",
+      "tags": ["TypeScript", "Full-Stack", "Web"],
       "links": [
         {
-          "name": "Website",
-          "href": "https://tedawf-dot-com.netlify.app",
-          "icon": "globe"
-        },
-        {
           "name": "Source",
-          "href": "https://github.com/tedawf/portfolio-2023",
+          "href": "https://github.com/abhishekmaher6699/roadNotTaken",
           "icon": "github"
         }
       ]
     },
     {
-      "name": "Rapid Ride Fight (Final Year)",
-      "description": "3D capture-the-flag, multiplayer boat fighting, with smart AI and water graphics",
-      "href": "https://games.digipen.edu/games/rapid-ride-fight",
-      "image": "/img/rrf.png",
-      "tags": ["C/C++", "OpenGL", "Custom Game Engine", "3D"],
+      "name": "Luxury Watch Price Prediction",
+      "description": "An end-to-end luxury watch price prediction system built around an MLOps pipeline and AWS infrastructure.",
+      "image": "/img/watch.png",
+      "tags": ["Machine Learning", "MLOps", "AWS", "Python"],
       "links": [
         {
-          "name": "Gameplay",
-          "href": "https://www.youtube.com/watch?v=bge3fiypg5U",
-          "icon": "youtube"
-        },
-        {
-          "name": "Trailer",
-          "href": "https://www.youtube.com/watch?v=PNAO-aI1Daw",
-          "icon": "youtube"
+          "name": "Source",
+          "href": "https://github.com/abhishekmaher6699/End-to-end-Watch-price-prediction",
+          "icon": "github"
         }
       ]
     },
     {
-      "name": "Glowing Under (2nd Year)",
-      "description": "2D platformer with a focus on puzzle-solving, no-death exploration and storytelling",
-      "href": "https://games.digipen.edu/games/glowing-under",
-      "image": "/img/gu.png",
-      "tags": ["C/C++", "OpenGL", "Custom Game Engine", "2D"],
+      "name": "RAG Art History",
+      "description": "An agentic RAG application for exploring art history.",
+      "image": "/img/rag.png",
+      "tags": ["RAG", "AI Agents", "LangChain", "Python"],
       "links": [
         {
-          "name": "Trailer",
-          "href": "https://www.youtube.com/watch?v=u6RYwBZlSfg",
-          "icon": "youtube"
+          "name": "Source",
+          "href": "https://github.com/abhishekmaher6699/rag_art_history",
+          "icon": "github"
+        }
+      ]
+    },
+    {
+      "name": "Text-to-SQL LangChain Agent",
+      "description": "An agent that lets users chat with CSV files and structured data.",
+      "image": "/img/text-sql.png",
+      "tags": ["LangChain", "Text-to-SQL", "Python", "LLM"],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/abhishekmaher6699/Text-to-SQL-Langchain-agent",
+          "icon": "github"
+        }
+      ]
+    },
+    {
+      "name": "Face Recognition",
+      "description": "Face recognition using one-shot learning.",
+      "tags": ["Python", "Computer Vision", "Deep Learning"],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/abhishekmaher6699/face-recognition",
+          "icon": "github"
+        }
+      ]
+    },
+    {
+      "name": "Face Emotion Recognition",
+      "description": "A simple app to recognize emotions using MTCNN and a custom trained CNN model.",
+      "tags": ["Python", "MTCNN", "CNN", "Computer Vision"],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/abhishekmaher6699/face-emotion-recognition",
+          "icon": "github"
         }
       ]
     }

@@ -7,14 +7,10 @@ export default function Footer() {
       <div className="mx-auto flex max-w-3xl flex-col items-center justify-center px-8 pb-32 sm:flex-row-reverse sm:justify-between">
         <Socials />
         <section className="mt-8 text-center sm:mt-0 sm:text-left">
-          <p className="text-xs text-muted-foreground">
+          <p className="text-muted-foreground text-xs">
             &copy; {new Date().getFullYear()}{" "}
             <Link className="link" href="/">
-              tedawf.com
-            </Link>{" "}
-            |{" "}
-            <Link className="link font-bold" href="/privacy">
-              privacy?
+              Abhishek Maher
             </Link>
           </p>
         </section>

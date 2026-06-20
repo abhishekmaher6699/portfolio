@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ChatToggle from "./ChatToggle";
 import ThemeToggle from "./ThemeToggle";
 
 import routesData from "@/data/routes.json";
@@ -14,7 +13,7 @@ const navLinks = routesData.routes
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-background/75 backdrop-blur-sm">
+    <header className="bg-background/75 sticky top-0 z-50 backdrop-blur-sm">
       <div className="mx-auto max-w-3xl px-8 py-6">
         <nav className="flex items-center justify-between">
           <ul className="flex gap-4 sm:gap-8">
@@ -27,7 +26,6 @@ export default function Header() {
             ))}
           </ul>
           <div className="flex gap-2 sm:gap-4">
-            <ChatToggle />
             <ThemeToggle />
           </div>
         </nav>

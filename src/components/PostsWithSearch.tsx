@@ -20,7 +20,7 @@ interface Props {
   posts: PostSummary[];
 }
 
-type SortOption = "newest" | "oldest" | "title" | "views";
+type SortOption = "newest" | "oldest" | "title";
 
 export default function PostsWithSearch({ posts }: Props) {
   const [query, setQuery] = useState("");
@@ -43,18 +43,18 @@ export default function PostsWithSearch({ posts }: Props) {
     })
     .sort((a, b) => {
       switch (sortBy) {
-        case "newest":
-          return (b.publishedAt || "0000-01-01").localeCompare(
-            a.publishedAt || "0000-01-01",
-          );
-        case "oldest":
-          return (a.publishedAt || "0000-01-01").localeCompare(
-            b.publishedAt || "0000-01-01",
-          );
+        case "newest": {
+          const dateA = a.publishedAt ? new Date(a.publishedAt).getTime() : 0;
+          const dateB = b.publishedAt ? new Date(b.publishedAt).getTime() : 0;
+          return dateB - dateA;
+        }
+        case "oldest": {
+          const dateA = a.publishedAt ? new Date(a.publishedAt).getTime() : 0;
+          const dateB = b.publishedAt ? new Date(b.publishedAt).getTime() : 0;
+          return dateA - dateB;
+        }
         case "title":
           return a.title.localeCompare(b.title);
-        case "views":
-          return (b.views ?? 0) - (a.views ?? 0);
         default:
           return 0;
       }
@@ -99,7 +99,7 @@ export default function PostsWithSearch({ posts }: Props) {
             />
             <Label
               htmlFor="show-drafts"
-              className={`whitespace-nowrap text-sm ${
+              className={`text-sm whitespace-nowrap ${
                 draftCount === 0 ? "text-muted-foreground" : "cursor-pointer"
               }`}
             >
@@ -109,8 +109,8 @@ export default function PostsWithSearch({ posts }: Props) {
 
           {/* Sort control */}
           <div className="flex items-center space-x-2">
-            <ArrowUpDown className="h-4 w-4 text-muted-foreground" />
-            <Label className="text-sm text-muted-foreground">Sort:</Label>
+            <ArrowUpDown className="text-muted-foreground h-4 w-4" />
+            <Label className="text-muted-foreground text-sm">Sort:</Label>
             <Select
               value={sortBy}
               onValueChange={(value: SortOption) => setSortBy(value)}
@@ -122,7 +122,6 @@ export default function PostsWithSearch({ posts }: Props) {
                 <SelectItem value="newest">Newest</SelectItem>
                 <SelectItem value="oldest">Oldest</SelectItem>
                 <SelectItem value="title">A-Z</SelectItem>
-                <SelectItem value="views">Most views</SelectItem>
               </SelectContent>
             </Select>
           </div>

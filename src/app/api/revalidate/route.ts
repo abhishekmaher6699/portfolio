@@ -39,11 +39,11 @@ export async function POST(request: Request) {
   const slug = body.slug?.trim();
 
   // Always refresh the blog list because titles/summaries/tags can change.
-  revalidateTag("posts");
+  revalidateTag("posts", "max");
   revalidatePath("/blog");
 
   if (slug) {
-    revalidateTag(`post:${slug}`);
+    revalidateTag(`post:${slug}`, "max");
     revalidatePath(`/blog/${slug}`);
   }
 

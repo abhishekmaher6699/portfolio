@@ -1,4 +1,4 @@
-import { ArrowLeftIcon } from "@radix-ui/react-icons";
+import { ArrowLeftIcon } from "lucide-react";
 import LinkWithIcon from "../components/LinkWithIcon";
 
 export default function NotFound() {
@@ -13,9 +13,8 @@ export default function NotFound() {
                 <h1 className="title sm:text-5xl">
                   cannot find <i>leh</i>...
                 </h1>
-                <p className="mt-1 text-base text-muted-foreground">
-                  Maybe I renamed or deleted the page <i>liao</i>. Try again{" "}
-                  <i>lor</i>.
+                <p className="text-muted-foreground mt-1 text-base">
+                  Maybe I renamed or deleted the page. Try again <i>lor</i>.
                 </p>
               </div>
               <div className="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">

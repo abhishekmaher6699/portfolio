@@ -1,0 +1,20 @@
+{
+  "categories": [
+    {
+      "name": "Languages",
+      "skills": ["Python", "SQL", "JavaScript"]
+    },
+    {
+      "name": "Frameworks",
+      "skills": ["React.js", "Express.js", "Django"]
+    },
+    {
+      "name": "Databases",
+      "skills": ["PostgreSQL", "Supabase"]
+    },
+    {
+      "name": "Tools & Deploy",
+      "skills": ["Github", "GitHub Actions", "Docker", "Render", "Vercel"]
+    }
+  ]
+}

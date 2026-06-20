@@ -25,24 +25,11 @@
       "showInNav": true
     },
     {
-      "path": "/privacy",
-      "name": "privacy",
-      "description": "Privacy policy",
-      "showInNav": false
-    },
-    {
       "path": "/resume.pdf",
       "name": "resume",
-      "description": "Ted's resume CV in pdf format",
+      "description": "Abhishek's resume CV in pdf format",
       "showInNav": false
     }
   ],
-  "externalLinks": [
-    {
-      "path": "https://www.instagram.com/gomugomu.cat",
-      "name": "instagram",
-      "description": "Ted Lead for escalations (joke reference to cat's account)",
-      "isExternal": true
-    }
-  ]
+  "externalLinks": []
 }

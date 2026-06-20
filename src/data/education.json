@@ -1,49 +1,33 @@
 {
   "education": [
     {
-      "name": "Digipen Institute of Technology Singapore",
-      "href": "https://www.digipen.edu.sg",
-      "logo": "/img/digipen.png",
+      "name": "Pimpri Chinchwad College of Engineering",
+      "href": "https://www.pccoepune.com/",
+      "logo": "/img/pccoe-logo.png",
       "positions": [
         {
-          "title": "BS in Computer Science in Real-Time Interactive Simulation",
-          "start": "Sep 2019",
-          "end": "Apr 2023",
+          "title": "Masters in Computer Applications",
+          "start": "2025",
+          "end": "2027",
           "description": [
-            "Graduated with a Minor in Mathematics",
-            "President of Digipen Student Management Committee for freshman year",
-            "3-time recipient of the Dean's Honor List"
-          ],
-          "links": [
-            {
-              "name": "Final Year Project",
-              "href": "https://games.digipen.edu/games/rapid-ride-fight",
-              "icon": "globe"
-            },
-            {
-              "name": "2nd Year Project",
-              "href": "https://games.digipen.edu/games/glowing-under",
-              "icon": "globe"
-            }
+            "Current CGPA: 8.8",
+            "Coursework and project work focused on data science, AI/ML, web development, and software engineering."
           ]
         }
       ]
     },
     {
-      "name": "Singapore Polytechnic",
-      "href": "https://www.sp.edu.sg",
-      "logo": "/img/sp.png",
+      "name": "Dr. Babasaheb Ambedkar Marathwada University",
+      "href": "https://www.bamu.ac.in/",
+      "logo": "/img/bamu-logo.png",
       "positions": [
         {
-          "title": "Diploma in Games Design and Development",
-          "start": "Apr 2014",
-          "end": "May 2017",
-          "links": [
-            {
-              "name": "Final Year Project",
-              "href": "https://tedawf.github.io/portfolio-2019/phase.html",
-              "icon": "globe"
-            }
+          "title": "Bachelors in Computer Applications",
+          "start": "2022",
+          "end": "2025",
+          "description": [
+            "Graduated with a 7.3 CGPA.",
+            "Built a foundation in programming, databases, web development, and applied computer science."
           ]
         }
       ]

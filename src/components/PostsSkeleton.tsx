@@ -34,7 +34,7 @@ export default function PostsSkeleton({
       )}
 
       <Card className="overflow-hidden">
-        <ul className="divide-y divide-border">
+        <ul className="divide-border divide-y">
           {Array.from({ length: rows }).map((_, index) => (
             <li key={index} className="group">
               <article className="p-6">
@@ -57,7 +57,7 @@ export default function PostsSkeleton({
                     </div>
                   </div>
 
-                  <div className="flex flex-shrink-0 flex-col items-start gap-2 text-sm text-muted-foreground sm:items-end">
+                  <div className="text-muted-foreground flex flex-shrink-0 flex-col items-start gap-2 text-sm sm:items-end">
                     <Skeleton className="h-5 w-28" />
                     <Skeleton className="h-5 w-24" />
                     <Skeleton className="h-5 w-20" />

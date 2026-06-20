@@ -34,7 +34,7 @@ export default function BlogImage({
         <DialogTrigger asChild>
           <button
             type="button"
-            className="block w-full cursor-zoom-in text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            className="focus-visible:ring-ring block w-full cursor-zoom-in text-left focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             aria-label="View full size"
           >
             <ImageWithSkeleton
@@ -42,7 +42,7 @@ export default function BlogImage({
               alt={alt}
               width={width}
               height={height}
-              className="h-auto w-full select-none rounded-lg"
+              className="h-auto w-full rounded-lg select-none"
               containerClassName="w-full overflow-visible"
               skeletonClassName="rounded-lg bg-muted/30"
               priority
@@ -63,7 +63,7 @@ export default function BlogImage({
             "data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
           )}
         >
-          <div className="fixed right-4 top-4 z-50 flex items-center gap-2 sm:right-6 sm:top-6">
+          <div className="fixed top-4 right-4 z-50 flex items-center gap-2 sm:top-6 sm:right-6">
             <DialogClose asChild>
               <Button
                 type="button"
@@ -78,13 +78,13 @@ export default function BlogImage({
           </div>
 
           <div className="max-w-[min(92vw,1200px)]">
-            <div className="rounded-xl border bg-background p-2 shadow-2xl">
+            <div className="bg-background rounded-xl border p-2 shadow-2xl">
               <ImageWithSkeleton
                 src={src}
                 alt={alt}
                 width={width}
                 height={height}
-                className="h-auto max-h-[85vh] w-auto max-w-[min(90vw,1160px)] select-none rounded-lg object-contain"
+                className="h-auto max-h-[85vh] w-auto max-w-[min(90vw,1160px)] rounded-lg object-contain select-none"
                 skeletonClassName="rounded-lg bg-muted/30"
                 quality={85}
                 priority={false}

@@ -39,9 +39,9 @@ export function ProjectCard({ project }: Props) {
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
         <CardTitle>{name}</CardTitle>
-        <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
-          {description}
-        </Markdown>
+        <div className="prose text-muted-foreground dark:prose-invert max-w-full font-sans text-xs text-pretty">
+          <Markdown>{description}</Markdown>
+        </div>
       </CardContent>
       <CardFooter className="flex h-full flex-col items-start justify-between gap-4">
         {tags && tags.length > 0 && (

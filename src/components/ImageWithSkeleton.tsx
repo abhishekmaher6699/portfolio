@@ -27,7 +27,7 @@ export default function ImageWithSkeleton({
         <Skeleton
           aria-hidden
           className={cn(
-            "pointer-events-none absolute inset-0 z-10 rounded-none bg-muted",
+            "bg-muted pointer-events-none absolute inset-0 z-10 rounded-none",
             skeletonClassName,
           )}
         />

@@ -1,6 +1,6 @@
 import { PostSummary } from "@/lib/posts";
-import { formatDate, formatViews } from "@/lib/utils";
-import { Calendar, Clock, Edit3, Eye } from "lucide-react";
+import { formatDate } from "@/lib/utils";
+import { Calendar, Clock, Edit3 } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "./ui/Badge";
 import { Card } from "./ui/Card";
@@ -15,18 +15,17 @@ export default function Posts({ posts }: Props) {
   return (
     posts.length > 0 && (
       <Card className="overflow-hidden">
-        <ul className="divide-y divide-border">
+        <ul className="divide-border divide-y">
           {posts.map((post) => {
-            const viewCount = typeof post.views === "number" ? post.views : 0;
             return (
               <li key={post.slug} className="group">
                 <Link href={`/blog/${post.slug}`} className="block">
-                  <article className="p-6 transition-colors hover:bg-muted/30">
+                  <article className="hover:bg-muted/30 p-6 transition-colors">
                     <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                       {/* Content Section */}
                       <div className="min-w-0 flex-1">
                         <div className="mb-2 flex items-center gap-2">
-                          <h3 className="line-clamp-2 min-h-[2.5em] text-lg font-semibold leading-tight transition-colors group-hover:text-primary">
+                          <h3 className="group-hover:text-primary line-clamp-2 min-h-[2.5em] text-lg leading-tight font-semibold transition-colors">
                             {post.title}
                           </h3>
 
@@ -38,7 +37,7 @@ export default function Posts({ posts }: Props) {
                           )}
                         </div>
 
-                        <p className="mb-3 line-clamp-2 min-h-[3.25em] text-sm leading-relaxed text-muted-foreground">
+                        <p className="text-muted-foreground mb-3 line-clamp-2 min-h-[3.25em] text-sm leading-relaxed">
                           {post.summary ?? ""}
                         </p>
 
@@ -67,7 +66,7 @@ export default function Posts({ posts }: Props) {
                       </div>
 
                       {/* Metadata Section */}
-                      <div className="flex flex-shrink-0 flex-col items-start gap-2 text-sm text-muted-foreground sm:items-end">
+                      <div className="text-muted-foreground flex flex-shrink-0 flex-col items-start gap-2 text-sm sm:items-end">
                         {/* Date Information */}
                         {post.publishedAt && (
                           <div className="flex items-center gap-1.5">
@@ -90,12 +89,6 @@ export default function Posts({ posts }: Props) {
                         <div className="flex items-center gap-1.5">
                           <Clock className="h-3.5 w-3.5" />
                           <span>{post.readingTime} read</span>
-                        </div>
-
-                        {/* Views */}
-                        <div className="flex items-center gap-1.5">
-                          <Eye className="h-3.5 w-3.5" />
-                          <span>{formatViews(viewCount)} views</span>
                         </div>
                       </div>
                     </div>

@@ -1,16 +1,16 @@
 {
   "introduction": {
-    "greeting": "hi ted here. 👋",
-    "description": "Backend by profession, full-stack by passion. I build and self-host the lot.",
-    "chatPrompt": "For Q&A, start a chat with Ted Support",
+    "greeting": "hi, abhishek here.",
+    "description": "Data Science, AI/ML, and full-stack web development. I build machine learning apps, agentic tools, and web products that turn messy ideas into working systems.",
+    "chatPrompt": "For Q&A, start a chat with Abhishek Support",
     "escalation": {
-      "text": "For any escalations, please find my",
-      "linkText": "Ted Lead",
-      "suffix": "instead."
+      "text": "You can also find my work on",
+      "linkText": "GitHub",
+      "suffix": "."
     }
   },
   "escalationLink": {
-    "href": "https://www.instagram.com/gomugomu.cat",
-    "title": "meow"
+    "href": "https://github.com/abhishekmaher6699",
+    "title": "Abhishek Maher on GitHub"
   }
 }

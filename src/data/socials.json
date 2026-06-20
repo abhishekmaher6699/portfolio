@@ -1,19 +1,14 @@
 {
   "socials": [
     {
-      "name": "LinkedIn",
-      "href": "https://linkedin.com/in/tedawf",
-      "icon": "linkedin"
-    },
-    {
       "name": "GitHub",
-      "href": "https://github.com/tedawf",
+      "href": "https://github.com/abhishekmaher6699",
       "icon": "github"
     },
     {
-      "name": "Email",
-      "href": "mailto:hello@tedawf.com",
-      "icon": "mail"
+      "name": "Twitter",
+      "href": "https://twitter.com/abhiuwu",
+      "icon": "twitter"
     }
   ]
 }

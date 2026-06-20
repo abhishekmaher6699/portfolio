@@ -18,8 +18,9 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-  title: "Ted Thoughts.",
-  description: "My personal site to showcase my developer work and opinions.",
+  title: "Abhishek Maher",
+  description:
+    "Portfolio of Abhishek Maher, focused on Data Science, AI/ML, and full-stack web development.",
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -44,7 +45,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "bg-background min-h-screen font-sans antialiased",
           inter.variable,
           calistoga.variable,
         )}

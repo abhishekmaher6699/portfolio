@@ -17,7 +17,7 @@ export default function TimelineItem({ experience }: Props) {
         href={href}
         target="_blank"
         rel="noreferrer"
-        className="absolute -left-16 top-4 flex items-center justify-center rounded-full bg-white"
+        className="absolute top-4 -left-16 flex items-center justify-center rounded-full bg-white"
       >
         <Avatar className="size-12 border">
           <AvatarImage
@@ -32,27 +32,27 @@ export default function TimelineItem({ experience }: Props) {
       </Link>
       <div className="flex flex-1 flex-col justify-start gap-2">
         <Link href={href} target="_blank" rel="noreferrer" className="w-fit">
-          <h2 className="text-base font-semibold leading-none">{name}</h2>
+          <h2 className="text-base leading-none font-semibold">{name}</h2>
         </Link>
         <div className="flex flex-col gap-2">
           {positions.map((position) => (
             <div key={`${position.title}-${position.start}`}>
               <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                <p className="text-sm font-medium leading-none text-muted-foreground">
+                <p className="text-muted-foreground text-sm leading-none font-medium">
                   {position.title}
                 </p>
-                <time className="whitespace-nowrap pr-8 text-xs tabular-nums text-muted-foreground">
+                <time className="text-muted-foreground pr-8 text-xs whitespace-nowrap tabular-nums">
                   <span>{position.start}</span>
                   <span>{" - "}</span>
                   <span>{position.end ?? "Present"}</span>
                 </time>
               </div>
               {position.description && (
-                <ul className="ml-4 mt-2 list-outside list-disc">
+                <ul className="mt-2 ml-4 list-outside list-disc">
                   {position.description.map((desc, i) => (
                     <li
                       key={i}
-                      className="prose pr-8 text-sm dark:prose-invert"
+                      className="prose dark:prose-invert pr-8 text-sm"
                     >
                       {desc}
                     </li>
