@@ -1,15 +1,15 @@
 {
   "career": [
     {
-      "name": "Student",
+      "name": "Independent Developer",
       "href": "https://github.com/abhishekmaher6699",
       "logo": "/img/pccoe-logo.png",
       "positions": [
         {
-          "title": "MCA Student",
-          "start": "2025",
+          "title": "Full-Stack & AI Systems Developer",
+          "start": "2024",
           "description": [
-            "Currently pursuing a Masters in Computer Applications while building projects in AI/ML, data science, and full-stack web development.",
+            "Building and maintaining agentic tools, MLOps workflows, and full-stack web applications.",
             "Focused on practical engineering through projects such as real-time collaboration tools, recommendation systems, and ML deployment pipelines."
           ]
         }

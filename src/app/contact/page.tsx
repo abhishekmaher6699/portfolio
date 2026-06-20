@@ -7,7 +7,7 @@ export default function ContactPage() {
       <h1 className="title">contact me.</h1>
 
       <p className="text-muted-foreground max-w-lg text-sm leading-relaxed sm:text-base">
-        Feel free to reach out for collaborations, career opportunities, or just
+        feel free to reach out for collaborations, career opportunities, or just
         to say hi!
       </p>
 

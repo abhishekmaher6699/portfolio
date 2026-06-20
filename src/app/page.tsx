@@ -30,22 +30,18 @@ export default function Home() {
         <SwipeCards className="md:mr-8" />
 
         <div className="flex max-w-[320px] flex-col sm:max-w-full">
-          <h1 className="title text-4xl text-balance sm:text-5xl">
+          <h1 className="title text-3xl text-balance sm:text-4xl">
             {homeContent.introduction.greeting}
           </h1>
 
-          <p className="mt-2 text-sm font-medium sm:text-base">
-            AI/ML and full-stack developer from India
-          </p>
-
-          <p className="mt-4 max-w-sm text-sm text-balance sm:text-base">
+          <p className="mt-4 max-w-xl text-sm text-balance sm:text-base">
             {homeContent.introduction.description}
           </p>
 
           {/* Quick Info Grid */}
           <div className="border-border text-muted-foreground mt-6 grid max-w-sm grid-cols-2 gap-4 border-t pt-4 font-mono text-xs">
             <div>
-              <span className="text-muted-foreground/50 mb-0.5 block text-[10px] tracking-wider uppercase">
+              <span className="text-muted-foreground/50 mb-0.5 block text-[10px] tracking-wider lowercase">
                 Location
               </span>
               <span className="text-foreground font-medium">Pune, India</span>
@@ -66,7 +62,7 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="mt-6 text-sm sm:text-base">
+          {/* <p className="mt-6 text-sm sm:text-base">
             {homeContent.introduction.escalation.text}&nbsp;
             <Link
               href={homeContent.escalationLink.href}
@@ -77,7 +73,7 @@ export default function Home() {
               {homeContent.introduction.escalation.linkText}
             </Link>
             {homeContent.introduction.escalation.suffix}
-          </p>
+          </p> */}
 
           <section className="mt-6 flex flex-wrap items-center gap-4">
             <Link href="/resume.pdf" target="_blank">

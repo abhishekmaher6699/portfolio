@@ -1,8 +1,7 @@
 {
   "introduction": {
-    "greeting": "hi, abhishek here.",
-    "description": "Data Science, AI/ML, and full-stack web development. I build machine learning apps, agentic tools, and web products that turn messy ideas into working systems.",
-    "chatPrompt": "For Q&A, start a chat with Abhishek Support",
+    "greeting": "hi, abhishek maher here.",
+    "description": "i build intelligent ai agents, data pipelines, and full-stack web applications.",
     "escalation": {
       "text": "You can also find my work on",
       "linkText": "GitHub",
