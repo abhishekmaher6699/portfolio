@@ -1,9 +1,11 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Providers from "@/components/Providers";
+import SpawnCatButton from "@/components/SpawnCatButton";
 import { cn } from "@/lib/utils";
 import type { Metadata, Viewport } from "next";
 import { Calistoga, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -51,6 +53,8 @@ export default function RootLayout({
             <main className="grow">{children}</main>
           </div>
           <Footer />
+          <Script src="/oneko.js?v=8" strategy="afterInteractive" />
+          <SpawnCatButton />
         </Providers>
       </body>
     </html>
