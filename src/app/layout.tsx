@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Providers from "@/components/Providers";
 import SpawnCatButton from "@/components/SpawnCatButton";
 import { cn } from "@/lib/utils";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/next"
 import type { Metadata, Viewport } from "next";
 import { Calistoga, Inter } from "next/font/google";
 import Script from "next/script";
@@ -56,8 +56,8 @@ export default function RootLayout({
           <Footer />
           <Script src="/oneko.js?v=8" strategy="afterInteractive" />
           <SpawnCatButton />
-          <Analytics />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
