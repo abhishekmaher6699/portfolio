@@ -34,12 +34,14 @@ export default function PostsWithSearch({ posts }: Props) {
         return false;
       }
 
-      // Search filter
+      // Search filter: split into individual lowercase words/terms
       const haystack = [post.title, post.summary, ...(post.tags || [])]
+        .filter(Boolean)
         .join(" ")
         .toLowerCase();
 
-      return haystack.includes(query.toLowerCase());
+      const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+      return terms.every((term) => haystack.includes(term));
     })
     .sort((a, b) => {
       switch (sortBy) {
@@ -71,7 +73,7 @@ export default function PostsWithSearch({ posts }: Props) {
         <div className="flex items-center gap-3">
           <Input
             type="text"
-            placeholder="Search something..."
+            placeholder="Search posts..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="flex-1"
@@ -128,7 +130,22 @@ export default function PostsWithSearch({ posts }: Props) {
         </div>
       </div>
 
-      <Posts posts={filtered} />
+      {filtered.length > 0 ? (
+        <Posts posts={filtered} />
+      ) : (
+        <div className="border-border border-muted-foreground/20 flex flex-col items-center justify-center rounded-lg border border-dashed py-12 text-center">
+          <p className="text-muted-foreground text-sm">
+            No posts found matching &ldquo;{query}&rdquo;
+          </p>
+          <Button
+            variant="link"
+            onClick={resetFilter}
+            className="mt-2 text-xs font-semibold"
+          >
+            Clear Search
+          </Button>
+        </div>
+      )}
     </div>
   );
 }
