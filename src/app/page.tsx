@@ -47,13 +47,13 @@ export default function Home() {
               <span className="text-foreground font-medium">Pune, India</span>
             </div>
             <div>
-              <span className="text-muted-foreground/50 mb-0.5 block text-[10px] tracking-wider uppercase">
+              <span className="text-muted-foreground/50 mb-0.5 block text-[10px] tracking-wider lowercase">
                 Age
               </span>
               <span className="text-foreground font-medium">22y</span>
             </div>
             <div className="col-span-2">
-              <span className="text-muted-foreground/50 mb-0.5 block text-[10px] tracking-wider uppercase">
+              <span className="text-muted-foreground/50 mb-0.5 block text-[10px] tracking-wider lowercase">
                 Languages
               </span>
               <span className="text-foreground font-medium">
