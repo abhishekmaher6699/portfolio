@@ -220,3 +220,21 @@
 .prose table {
   @apply border-separate border-spacing-0 overflow-hidden rounded-lg border;
 }
+
+.github-calendar-scroll {
+  scrollbar-color: hsl(var(--muted-foreground) / 0.4) transparent;
+  scrollbar-width: thin;
+}
+
+.github-calendar-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.github-calendar-scroll::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background-color: hsl(var(--muted-foreground) / 0.4);
+}
+
+.github-calendar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}

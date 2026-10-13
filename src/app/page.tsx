@@ -6,6 +6,7 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Certifications from "@/components/Certifications";
 import Socials from "@/components/Socials";
+import GithubStreak from "@/components/GithubStreak";
 import SwipeCards from "@/components/SwipeCards";
 import { Button } from "@/components/ui/Button";
 import homeContent from "@/data/home.json";
@@ -90,6 +91,8 @@ export default function Home() {
       <Experience />
 
       <Skills />
+
+      <GithubStreak />
 
       <section className="flex flex-col gap-8">
         <div className="flex justify-between">
