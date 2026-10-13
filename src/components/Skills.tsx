@@ -10,6 +10,7 @@ const skillIcons: Record<string, string> = {
   Python: "python",
   SQL: "sql",
   JavaScript: "javascript",
+  Go: "go",
   "React.js": "react",
   "Express.js": "expressjs",
   Django: "django",

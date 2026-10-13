@@ -1,18 +1,10 @@
 {
   "categories": [
-    {
-      "name": "ai & machine learning",
-      "skills": [
-        "Deep learning",
-        "AI Agents & LangChain",
-        "RAG & LLMs",
-        "MLOps (MLflow, DVC)"
-      ]
-    },
-    {
+        {
       "name": "languages",
-      "skills": ["Python", "SQL", "JavaScript"]
+      "skills": ["Python", "SQL", "JavaScript", "Go"]
     },
+
     {
       "name": "frameworks",
       "skills": ["React.js", "Express.js", "Django"]
@@ -20,6 +12,16 @@
     {
       "name": "databases",
       "skills": ["PostgreSQL", "Supabase"]
+    },
+
+        {
+      "name": "ai & machine learning",
+      "skills": [
+        "Deep learning",
+        "AI Agents & LangChain",
+        "RAG & LLMs",
+        "MLOps (MLflow, DVC)"
+      ]
     },
     {
       "name": "tools & deploy",

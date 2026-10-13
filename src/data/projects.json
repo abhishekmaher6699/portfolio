@@ -1,5 +1,25 @@
 {
   "projects": [
+        {
+      "name": "Smart Bookmarker",
+      "description": "An AI-powered bookmark management system built with a browser extension and TypeScript backend, featuring secure authentication, PostgreSQL storage, message queue integration, and AI-assisted bookmark organization and retrieval.",
+      "image": "/img/smart-bookmarker.png",
+      "tags": [
+        "TypeScript",
+        "Express.js",
+        "PostgreSQL",
+        "Browser Extension",
+        "JWT",
+        "Message Queues"
+      ],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/abhishekmaher6699/smart-bookmarker",
+          "icon": "github"
+        }
+      ]
+    },
     {
       "name": "OpenBoard",
       "description": "A real-time collaborative whiteboard with live drawing, chat, presence, invite-based access, approvals, roles, undo/redo, and activity tracking.",
